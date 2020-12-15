@@ -1,0 +1,72 @@
+:root {
+	--new-yellow: rgba(245, 223, 77, 0.4);
+}
+
+body {padding: 0;margin: 0;background: #666666; scroll-behavior: smooth;}
+* {transition: 0.1s ease-in-out; font-family: 'Roboto Slab', serif;}
+button:focus {outline: none;}
+
+.main-block {
+	width: 100%;
+	position: relative;
+	top: 40px;
+}
+
+#result-word {
+	margin-right: auto;
+	margin-left: auto;
+	padding: 6px;
+	width: 900px;
+	display: block;
+	word-wrap: break-word;
+	color: white;
+	letter-spacing: 1px;
+	text-align: center;
+	font-size: 20pt;
+}
+
+
+#virtual-board-block {
+	border: 2px solid rgb(255, 223, 77);
+	border-radius: 10px;
+	box-shadow: 0px 10px 15px #333333;
+	background: var(--new-yellow);
+	padding: 12px;
+	width: 940px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	
+	display: block;
+	transition: 0s ease-in-out;
+	user-select: none;
+}
+
+#virtual-board-block button {
+	border: 1px solid white;
+	border-radius: 6px;
+	background: rgb(255, 223, 77);
+	color: black;
+	padding: 6px;
+	padding-left: 12px;
+	padding-right: 12px;
+	text-align: center;
+	font-size: 20pt;
+	box-shadow: 1px 8px 3px #666666;
+	display: inline-block;
+	margin-right: 12px;
+	margin-bottom: 20px;
+	transform: translateY(0px);
+}
+#virtual-board-block button:active {
+	transform: translateY(8px);
+	box-shadow: 0px 0px 0px #666666;
+	background: maroon;
+	color: white;
+}
+
+#virtual-board-block button:nth-of-type(56) {padding-left: 0px;padding-right: 0px;width: 580px;}
+#virtual-board-block button:nth-of-type(42) {padding-left: 0px;padding-right: 0px;width: 150px;}
+#virtual-board-block button:nth-of-type(15) {padding-left: 0px;padding-right: 0px;width: 150px;}
+#virtual-board-block button:nth-of-type(53) {padding-left: 0px;padding-right: 0px;width: 125px;}
+
