@@ -1,6 +1,5 @@
-:root {
-	--new-yellow: rgba(245, 223, 77, 0.4);
-}
+@import 'blocks/fonts.css';
+:root {--new-yellow: rgba(245, 223, 77, 0.4);}
 
 body {padding: 0;margin: 0;background: #666666; scroll-behavior: smooth;}
 * {transition: 0.1s ease-in-out; font-family: 'Roboto Slab', serif;}
