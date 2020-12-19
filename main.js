@@ -35,6 +35,13 @@ function EnRuLang(base_x) {
 	});
 }
 
+function btnSound() {
+	let audio = new Audio();
+	audio.preload = 'auto';
+	audio.src = 'audio/soundbtn.mp3';
+	audio.play();
+}
+
 function unDrawBtn(item, trnsform, bgColor, txtColor, boxShadow, x) {
 	item.style.transform = `translateY(${trnsform})`;
 	item.style.backgroundColor = bgColor;
@@ -73,6 +80,7 @@ function altIntFunc() {
 }
 
 window.addEventListener("keydown", function(e) {
+	btnSound();
 	if (e.keyCode == 18) altIntFunc();
 	if (e.keyCode == 32) resWord.innerHTML += " ";
 	
@@ -111,6 +119,7 @@ window.addEventListener("keyup", function(e) {
 function btn_onclick() {
 	document.querySelectorAll(".btn-board").forEach(function(item) {
 		item.addEventListener("click", (e) => {
+			btnSound();
 			if (item.innerHTML == "Backspace") resWord.innerHTML = resWord.innerHTML.split("").slice(0,-1).join("");
 			else if (item.innerHTML == "Space") resWord.innerHTML += " ";
 			else if (item.innerHTML == "Tab") resWord.innerHTML = resWord.innerHTML;
@@ -133,4 +142,3 @@ function btn_onclick() {
 	});
 }
 btn_onclick();
-
